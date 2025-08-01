@@ -1,28 +1,43 @@
+//new: vector pair,
+
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
     int s, n;
-    int x1, x2;
+    int x, y;
     cin >> s >> n;
+    int count = n;
     int flag = 1;
-
-    int x[n*2];
-
+    
+    vector<pair<int, int>>vec;
+    
     while (n)
     {
-        cin >> x1 >> x2;
-        if (s > x1)
+        cin >> x >> y;
+        vec.push_back({x, y});
+        n--;
+    }
+
+    sort(vec.begin(), vec.end());
+
+    for (int i = 0; i < count; i++)
+    {
+        for (const auto& p : vec)
         {
-            s += x2;
+
+        }
+        
+        if (s > vec[i].first)
+        {
+            s += vec[i].second;
         }
         else
         {
             flag = 0;
             break;
         }
-        n--;
     }
     if (flag == 1)
     {
