@@ -1,33 +1,34 @@
-// #include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main() {
-    vector<int> num;
     int n;
     cin >> n;
     int m;
     cin >> m;
+
+    vector<int> vec;
+
     int temp;
     int min;
-    int max;
-    for (int i = 0; i < m; i++)
+    int np = m;
+
+    while (m)
     {
         cin >> temp;
-        num.push_back(temp);
-        if (i == 0) {
-            min = num[0];
-            max = num[0];
-        }
-        if (i < n) {
-            if (num.at(i) < min) {
-                min = num.at(i);
-            }
-            else if(num.at(i) > max) {
-                max = num.at(i);
-            }
+        vec.push_back(temp);
+        m--;
+    }
+    sort(vec.begin(), vec.end());
+    int result = vec[n-1] - vec[0];
+
+    for (int i = 0; i <= np - n; i++)
+    {
+        if (result > vec[i+n-1] - vec[i])
+        {
+            result = vec[i+n-1] - vec[i];
         }
     }
-    cout << max - min << endl;
+    
+    cout << result << endl;
 }
-
-// max_element(num.begin(), n) - *min_element(num.begin(), n)
