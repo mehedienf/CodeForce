@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"/Volumes/Volume 1/Learning/CodeForce/Contests/1059 Div. 3/A.cpp","tests":[{"id":1760712817462,"input":"3\n4\n3 3 3 3\n5\n7 1 6 9 9\n5\n3 4 4 4 3\n","output":"3\n9\n4\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Volumes/Volume 1/Learning/CodeForce/Contests/1059 Div. 3/A.cpp","group":"local","local":true}
