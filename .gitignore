@@ -1,4 +1,23 @@
-/.DS_Store
+# Executable files
+a
+a.out
+*.out
+*.exe
+*.bin
+
+# Object files
+*.o
+*.obj
+
+# macOS specific
+.DS_Store
+
+# Editor specific
+.vscode/
+*.swp
+*.swo
+*~
+
 /.cph
 /.project
 /tempCodeRunnerFile
